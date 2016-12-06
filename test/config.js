@@ -42,4 +42,10 @@ describe('Configuration', () => {
 			.get('/api/authenticated')
 			.expect(200, done);
 	});
+
+	it('Return upnp-compliant xml-description for the service: GET /description.xml', done => {
+		request
+			.get('/description.xml')
+			.expect(200, done);
+	});
 });
